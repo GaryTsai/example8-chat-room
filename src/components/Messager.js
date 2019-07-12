@@ -3,6 +3,7 @@ import moment from 'moment-timezone';
 
 
 class Messager extends Component {
+    //when click the messager change UI to the messager's message
     changeMessageIndex=()=>{
         let messageIndex = this.props.index;
         this.props.messagerChange(messageIndex);

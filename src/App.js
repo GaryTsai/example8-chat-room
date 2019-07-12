@@ -7,6 +7,7 @@ import  './index.css';
 import moment from 'moment-timezone';
 
 //static message data
+
 const messagerData= {
   messager: [{
     name: 'Elly', message: [
@@ -37,13 +38,15 @@ class App extends Component {
     super(props);
     this.state={
       messagerData:messagerData,
+      //messager ID
       messagerIndex:0,
       newMessage:''
     };
   }
-  //select messager and change messagerIndex for chatroom
+  //select messager and change messagerIndex for chatroom and render the message UI
   messagerChange=(index)=> {
       console.log('messagerIndex',index);
+      //if select same messager
       if(index === this.state.messagerIndex){
           return;
       }
@@ -62,7 +65,7 @@ class App extends Component {
     handleKeyDown=(e)=>{
       console.log('handleKeyDown',e.target.value);
         if(e.keyCode === 13 && e.target.value!==''){
-            // let ts = new Date();
+            //use moment js to format current date
             let  taiwan = moment.tz(new Date(), "Asia/Taipei").format();
             //push new message to messager's message list
             messagerData.messager[this.state.messagerIndex].message.push(
@@ -90,9 +93,11 @@ class App extends Component {
                                     messagerChange={this.messagerChange}
                                     key={index}
                                     index={index}
+
                                     img={messager.img}
                                     name={messager.name}
-                                    message={messager.message}/>
+                                    message={messager.message}
+                          />
                       );
                     })}
                   </div>
