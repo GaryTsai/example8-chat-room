@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/example8-chat-room/static/css/main.4d130de4.chunk.css",
-    "main.js": "/example8-chat-room/static/js/main.312355d8.chunk.js",
-    "main.js.map": "/example8-chat-room/static/js/main.312355d8.chunk.js.map",
+    "main.js": "/example8-chat-room/static/js/main.29d4e379.chunk.js",
+    "main.js.map": "/example8-chat-room/static/js/main.29d4e379.chunk.js.map",
     "runtime~main.js": "/example8-chat-room/static/js/runtime~main.bdb9e9e9.js",
     "runtime~main.js.map": "/example8-chat-room/static/js/runtime~main.bdb9e9e9.js.map",
     "static/js/2.e703e8cc.chunk.js": "/example8-chat-room/static/js/2.e703e8cc.chunk.js",
     "static/js/2.e703e8cc.chunk.js.map": "/example8-chat-room/static/js/2.e703e8cc.chunk.js.map",
     "index.html": "/example8-chat-room/index.html",
-    "precache-manifest.b0465d1cc428e233e308fca3535b3d87.js": "/example8-chat-room/precache-manifest.b0465d1cc428e233e308fca3535b3d87.js",
+    "precache-manifest.aa1b1a143dab61f4b44e3e00f889d3c3.js": "/example8-chat-room/precache-manifest.aa1b1a143dab61f4b44e3e00f889d3c3.js",
     "service-worker.js": "/example8-chat-room/service-worker.js",
     "static/css/main.4d130de4.chunk.css.map": "/example8-chat-room/static/css/main.4d130de4.chunk.css.map"
   }
