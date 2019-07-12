@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class MessageItem extends Component {
+class Message extends Component {
     render() {
         const {messageFromMe,content} = this.props
         let style=`message-item  ${messageFromMe ? "message-from-me" : "message-from-other"}`;
@@ -12,4 +12,4 @@ class MessageItem extends Component {
     }
 }
 
-export default MessageItem;
+export default Message;
