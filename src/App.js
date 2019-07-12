@@ -4,6 +4,8 @@ import MessageList from './components/MessageList';
 import UserInput from './components/UserInput';
 import  './static/App.css';
 import  './index.css';
+import moment from 'moment-timezone';
+
 //static message data
 const messagerData= {
   messager: [{
@@ -60,10 +62,12 @@ class App extends Component {
     handleKeyDown=(e)=>{
       console.log('handleKeyDown',e.target.value);
         if(e.keyCode === 13 && e.target.value!==''){
-            let ts = new Date();
+            // let ts = new Date();
+            let  taiwan = moment.tz(new Date(), "Asia/Taipei").format();
             //push new message to messager's message list
             messagerData.messager[this.state.messagerIndex].message.push(
-                {timestamp: ts.toISOString().substring(0, 19)+'+08:00',
+                {/*timestamp: ts.toISOString().substring(0, 19)+'+08:00',*/
+                 timestamp:taiwan.toString(),
                  content: e.target.value.toString(),
                  messageFromMe:true
                 })

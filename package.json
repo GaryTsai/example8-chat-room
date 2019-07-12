@@ -5,6 +5,8 @@
   "homepage": "https://GaryTsai.github.io/example8-chat-room",
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.26",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"

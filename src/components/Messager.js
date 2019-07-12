@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import moment from 'moment-timezone';
 
 
 class Messager extends Component {
@@ -25,7 +26,7 @@ class Messager extends Component {
                         <div className="thread-item_right">
                             <div className="thread-from">{name}</div>
                             <div><span className="thread-content">{message[message.length-1].content}</span></div>
-                            <span className="thread-time">{message[message.length-1].timestamp}</span></div>
+                            <span className="thread-time">{moment.tz(message[message.length-1].timestamp, "Asia/Taipei").format()}</span></div>
                     </div>
                 </li>
             </div>
