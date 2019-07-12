@@ -10,7 +10,7 @@ import moment from 'moment-timezone';
 const messagerData= {
   messager: [{
     name: 'Elly', message: [
-          {timestamp: '2019-07-10 11:48:12 ', content: '來來來!!', messageFromMe:false},
+          {timestamp: '2019-07-10 11:48:12', content: '來來來!!', messageFromMe:false},
           {timestamp: '2019-07-10 11:48:24', content: '來甲本~', messageFromMe:false},
           {timestamp: '2019-07-10 11:48:48', content: '要吃嗎?', messageFromMe: false},
           {timestamp: '2019-07-10 11:49:50', content: '來甲本~', messageFromMe: true},
@@ -19,13 +19,13 @@ const messagerData= {
   }, {
     name: 'Mercy', message:
         [
-          {timestamp: '2019-07-10 12:49:12 ', content: '我要報表!', messageFromMe:false},
+          {timestamp: '2019-07-10 12:49:12', content: '我要報表!', messageFromMe:false},
         ],
     img: 'http://lorempixel.com/100/100/cats/2'
   }, {
       name: 'Cat', message:
           [
-            {timestamp: '2019-07-10 10:12:12 ', content: '喵嗚～',messageFromMe:false},
+            {timestamp: '2019-07-10 10:12:12', content: '喵嗚～',messageFromMe:false},
           ],
       img: 'http://lorempixel.com/100/100/cats/5'
     }],

@@ -1,6 +1,8 @@
 /* layout */
 .chat-app {
-    height: 95vh;
+    /*height: 95vh;*/
+    height: 97vh;
+
 }
 
 .chat-app_left {
@@ -83,6 +85,7 @@
 
 .message-list {
     padding-top: 10px;
+    height: calc(100% - 127px);
     height: calc(100% - 118px);
     overflow-y: scroll;
     position: sticky;
