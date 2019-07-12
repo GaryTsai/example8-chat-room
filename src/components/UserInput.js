@@ -3,11 +3,11 @@ import React, {Component} from 'react';
 class UserInput extends Component {
 
     render() {
-        const {messageChange,handleKeyDown,newMessage} = this.props;
+        const {newMessageChange,handleKeyDown,newMessage} = this.props;
         return (
             <div  className="footer">
                     <input className="new-message"
-                           onChange={messageChange}
+                           onChange={newMessageChange}
                            onKeyDown={handleKeyDown}
                     value={newMessage}/>
             </div>

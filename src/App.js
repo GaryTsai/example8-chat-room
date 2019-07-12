@@ -4,8 +4,8 @@ import MessageList from './components/MessageList';
 import UserInput from './components/UserInput';
 import  './static/App.css';
 import  './index.css';
+//static message data
 const messagerData= {
-
   messager: [{
     name: 'Elly', message: [
           {timestamp: '2019-07-10 11:48:12 ', content: '來來來!!', messageFromMe:false},
@@ -27,7 +27,6 @@ const messagerData= {
           ],
       img: 'http://lorempixel.com/100/100/cats/5'
     }],
-
 }
 
 
@@ -40,27 +39,29 @@ class App extends Component {
       newMessage:''
     };
   }
-  //select messager and change MessagerIndex for chatroom
+  //select messager and change messagerIndex for chatroom
   messagerChange=(index)=> {
-      // console.log('index',index);
-      // console.log(this.state.messagerIndex);
+      console.log('messagerIndex',index);
+      if(index === this.state.messagerIndex){
+          return;
+      }
       this.setState({
           messagerIndex: index ,
           newMessage:''
       });
-
   }
   //change newMessage
-    messageChange=(e)=>{
-        // console.log('messageChange:', e.target.value);
+    newMessageChange=(e)=>{
+      console.log('newMessageChange:', e.target.value);
         let newInputMessage = e.target.value;
         this.setState({ newMessage: newInputMessage });
     }
-
+  // update messagerData and clear newMessage
     handleKeyDown=(e)=>{
-      console.log('handleKeyDown');
+      console.log('handleKeyDown',e.target.value);
         if(e.keyCode === 13 && e.target.value!==''){
             let ts = new Date();
+            //push new message to messager's message list
             messagerData.messager[this.state.messagerIndex].message.push(
                 {timestamp: ts.toISOString().substring(0, 19)+'+08:00',
                  content: e.target.value.toString(),
@@ -76,15 +77,15 @@ class App extends Component {
         return (
             <div>
               <div className="chat-app clearfix">
-
                 <div className="chat-app_left">
-                  <div className="heading"><h3 className="messenger-title">Messager  {this.state.messagerIndex}</h3></div>
+                  <div className="heading"><h3 className="messenger-title">Messager  </h3></div>
                   <div className="thread-list">
                     {this.state.messagerData.messager.map((messager, index) => {
                       return (
                           <Messager className="Component-style"
-                                    messagerChange={this.messagerChange.bind(this,index)}
+                                    messagerChange={this.messagerChange}
                                     key={index}
+                                    index={index}
                                     img={messager.img}
                                     name={messager.name}
                                     message={messager.message}/>
@@ -97,15 +98,16 @@ class App extends Component {
                     <div className="current-target">{this.state.messagerData.messager[this.state.messagerIndex].name}</div>
                   </div>
                   <div className="message-list">
+                    {/* who are you talking to  */}
                     <MessageList message = {this.state.messagerData.messager}
                                  index={this.state.messagerIndex}
-
                     />
                   </div>
-                    {<UserInput
+                    <UserInput
                             newMessage={this.state.newMessage}
-                            messageChange={this.messageChange.bind(this)}
-                            handleKeyDown={this.handleKeyDown.bind(this)}/>}
+                            newMessageChange={this.newMessageChange}
+                            handleKeyDown={this.handleKeyDown}
+                    />
                 </div>
               </div>
             </div>
